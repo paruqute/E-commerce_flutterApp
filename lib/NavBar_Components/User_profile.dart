@@ -7,14 +7,34 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Profile",style: TextStyle(
-            color:backgroundColor, fontWeight: FontWeight.w500, fontSize: 18.0),),
-      ),
-      body: Container(
 
+      body: Container(
+          margin: EdgeInsets.all(10),
         child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Container(
+
+                height: 50,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    IconButton(icon:Icon(Icons.arrow_back,color: Colors.black,),
+                        onPressed:(){
+                          Navigator.pop(context);
+                        }),
+                    SizedBox(width: 10,),
+                    Text("Profile",style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),)
+                  ],
+
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
             Center(
               child: SizedBox(
                 height: 110,
